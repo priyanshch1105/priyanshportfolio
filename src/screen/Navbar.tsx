@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import {
   Menu,
   X,
-  Sparkles,
   Sun,
   Moon,
 } from "lucide-react";
@@ -90,11 +89,10 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all ${
-        isScrolled
-          ? "bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl border-b border-border shadow-sm"
-          : "bg-transparent"
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all ${isScrolled
+        ? "bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl border-b border-border shadow-sm"
+        : "bg-transparent"
+        }`}
     >
       <div className="container-center py-4">
         <div className="flex items-center justify-between">
@@ -121,11 +119,10 @@ export function Navbar() {
               <motion.button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className={`relative px-4 py-2 text-sm rounded-lg ${
-                  activeSection === item.href.slice(1)
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
+                className={`relative px-4 py-2 text-sm rounded-lg ${activeSection === item.href.slice(1)
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-foreground"
+                  }`}
                 whileHover={{ scale: 1.05 }}
               >
                 {activeSection === item.href.slice(1) && (
@@ -156,15 +153,6 @@ export function Navbar() {
                 <Moon className="h-4 w-4 text-indigo-600" />
               )}
             </motion.button>
-
-            <Button
-              size="sm"
-              className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white"
-              onClick={() => scrollToSection("#contact")}
-            >
-              <Sparkles className="mr-2 h-4 w-4" />
-              Hire Me
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -180,55 +168,55 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         <AnimatePresence>
-  {isOpen && (
-    <motion.div
-      initial={{ height: 0, opacity: 0 }}
-      animate={{ height: "auto", opacity: 1 }}
-      exit={{ height: 0, opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      className="md:hidden overflow-hidden"
-    >
-      <div className="pt-4 space-y-2">
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden overflow-hidden"
+            >
+              <div className="pt-4 space-y-2">
 
-        {/* ABOUT + THEME TOGGLE (SAME ROW) */}
-        <div className="flex items-center justify-between px-4 py-3 rounded-lg hover:bg-muted transition-colors">
-          <button
-            onClick={() => scrollToSection("#about")}
-            className="text-left text-muted-foreground hover:text-foreground"
-          >
-            About
-          </button>
+                {/* ABOUT + THEME TOGGLE (SAME ROW) */}
+                <div className="flex items-center justify-between px-4 py-3 rounded-lg hover:bg-muted transition-colors">
+                  <button
+                    onClick={() => scrollToSection("#about")}
+                    className="text-left text-muted-foreground hover:text-foreground"
+                  >
+                    About
+                  </button>
 
-          <motion.button
-            onClick={toggleTheme}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="p-2 rounded-md border border-border"
-          >
-            {isDark ? (
-              <Sun className="h-4 w-4 text-yellow-400" />
-            ) : (
-              <Moon className="h-4 w-4 text-indigo-600" />
-            )}
-          </motion.button>
-        </div>
+                  <motion.button
+                    onClick={toggleTheme}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="p-2 rounded-md border border-border"
+                  >
+                    {isDark ? (
+                      <Sun className="h-4 w-4 text-yellow-400" />
+                    ) : (
+                      <Moon className="h-4 w-4 text-indigo-600" />
+                    )}
+                  </motion.button>
+                </div>
 
-        {/* REST OF NAV ITEMS */}
-        {["skills", "projects", "experience", "contact"].map((section) => (
-          <button
-            key={section}
-            onClick={() => scrollToSection(`#${section}`)}
-            className="block w-full px-4 py-3 text-left rounded-lg
+                {/* REST OF NAV ITEMS */}
+                {["skills", "projects", "experience", "contact"].map((section) => (
+                  <button
+                    key={section}
+                    onClick={() => scrollToSection(`#${section}`)}
+                    className="block w-full px-4 py-3 text-left rounded-lg
                        text-muted-foreground hover:text-foreground
                        hover:bg-muted transition-colors"
-          >
-            {section.charAt(0).toUpperCase() + section.slice(1)}
-          </button>
-        ))}
-      </div>
-    </motion.div>
-  )}
-</AnimatePresence>
+                  >
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.nav>
   );

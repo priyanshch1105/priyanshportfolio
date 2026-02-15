@@ -1,25 +1,25 @@
-import { Sparkles, Rocket, Users } from "lucide-react";
+import { Brain, Palette, Smartphone } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function About() {
   const highlights = [
     {
-      icon: Sparkles,
-      title: "End-to-end Development",
-      description: "Design → Build → Deploy",
-      gradient: "from-yellow-500 to-orange-500",
+      icon: Brain,
+      title: "AI/ML Integration",
+      description: "Smart features with ML models",
+      gradient: "from-violet-500 to-purple-500",
     },
     {
-      icon: Rocket,
-      title: "Strong UX Thinking",
-      description: "With practical implementation",
-      gradient: "from-indigo-500 to-purple-500",
-    },
-    {
-      icon: Users,
-      title: "Real-world Experience",
-      description: "Building apps and startup products",
+      icon: Palette,
+      title: "Design to Code",
+      description: "Pixel-perfect implementation from Figma",
       gradient: "from-pink-500 to-rose-500",
+    },
+    {
+      icon: Smartphone,
+      title: "Cross-Platform Expertise",
+      description: "Flutter & React Native mastery",
+      gradient: "from-indigo-500 to-purple-500",
     },
   ];
 
@@ -58,13 +58,14 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            I design and develop{" "}
+            I specialize in building{" "}
             <span className="relative inline-block font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
-              high-quality mobile applications
+              intelligent mobile applications
             </span>{" "}
-            with a strong focus on user experience, performance, and visual
-            consistency. I bridge the gap between design and development,
-            ensuring pixel-perfect UI with smooth interactions.
+            that combine cutting-edge AI/ML capabilities with beautiful UI/UX design.
+            From designing user flows in Figma to deploying Flutter apps with integrated
+            machine learning models, I create end-to-end solutions that are both
+            visually stunning and functionally intelligent.
           </motion.p>
         </motion.div>
 
@@ -117,9 +118,9 @@ export function About() {
           className="grid grid-cols-1 gap-6 sm:grid-cols-3 max-w-4xl mx-auto"
         >
           {[
-            { value: "3+", label: "Projects Completed" },
-            { value: "1+", label: "Years Experience" },
-            { value: "100%", label: "Client Satisfaction" },
+            { value: "10+", label: "Projects Completed" },
+            { value: "2+", label: "Years Experience" },
+            { value: "4", label: "Core Skill Areas" },
           ].map((stat, index) => (
             <div
               key={index}

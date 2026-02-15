@@ -54,9 +54,9 @@ export function Hero() {
                bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600
                dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400
                bg-clip-text text-transparent leading-tight">
-  Hi, I’m <span className="whitespace-nowrap">Priyansh Chaurasiya</span>
-  <span className="inline-block ml-2 align-middle animate-wave">👋</span>
-</h1>
+            Hi, I’m <span className="whitespace-nowrap">Priyansh Chaurasiya</span>
+            <span className="inline-block ml-2 align-middle animate-wave">👋</span>
+          </h1>
 
         </motion.div>
 
@@ -66,9 +66,10 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          A <span className="text-indigo-600 dark:text-indigo-400 font-semibold">UI/UX-focused</span> Mobile App Developer specializing in{' '}
-          <span className="text-purple-600 dark:text-purple-400 font-semibold">Flutter</span> and{' '}
-          <span className="text-pink-600 dark:text-pink-400 font-semibold">React Native</span>
+          An <span className="text-violet-600 dark:text-violet-400 font-semibold">AI/ML Engineer</span>,{' '}
+          <span className="text-pink-600 dark:text-pink-400 font-semibold">UI/UX Designer</span>, and{' '}
+          <span className="text-indigo-600 dark:text-indigo-400 font-semibold">Flutter Developer</span>{' '}
+          building intelligent mobile apps with beautiful design
         </motion.p>
 
         <motion.div
@@ -84,11 +85,12 @@ export function Hero() {
           </p>
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             {[
-              { name: 'Flutter (Dart)', color: 'from-blue-500 to-cyan-500' },
-              { name: 'React Native (TS)', color: 'from-cyan-500 to-teal-500' },
-              { name: 'UI/UX Design', color: 'from-purple-500 to-pink-500' },
-              { name: 'Firebase', color: 'from-orange-500 to-red-500' },
-              { name: 'Material Design', color: 'from-indigo-500 to-purple-500' },
+              { name: 'TensorFlow & PyTorch', color: 'from-violet-500 to-purple-500' },
+              { name: 'Python & ML', color: 'from-blue-500 to-cyan-500' },
+              { name: 'Flutter (Dart)', color: 'from-indigo-500 to-blue-500' },
+              { name: 'UI/UX Design (Figma)', color: 'from-pink-500 to-rose-500' },
+              { name: 'Firebase & APIs', color: 'from-orange-500 to-red-500' },
+              { name: 'React & Next.js', color: 'from-cyan-500 to-teal-500' },
             ].map((tech, index) => (
               <motion.span
                 key={index}
@@ -122,14 +124,14 @@ export function Hero() {
           </motion.div>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <a href="https://drive.google.com/file/d/1V10CYfDhabQd7c40LZWSnF2O5oFPfXhi/view?usp=sharing" >
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 hover:bg-indigo-50 dark:hover:bg-indigo-950/30 hover:border-indigo-500 transition-all"
-            >
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 hover:bg-indigo-50 dark:hover:bg-indigo-950/30 hover:border-indigo-500 transition-all"
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </Button>
             </a>
           </motion.div>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -145,25 +147,25 @@ export function Hero() {
           </motion.div>
         </motion.div>
 
-       {/* Scroll Indicator */}
-<motion.div
-  className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2
+        {/* Scroll Indicator */}
+        <motion.div
+          className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2
              flex flex-col items-center gap-2
              text-xs sm:text-sm tracking-widest uppercase
              text-gray-500 dark:text-gray-400 select-none"
-  animate={{ y: [0, 8, 0] }}
-  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
->
-  <span>Scroll Down</span>
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <span>Scroll Down</span>
 
-  <motion.span
-    className="text-lg"
-    animate={{ y: [0, 6, 0] }}
-    transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-  >
-    ↓
-  </motion.span>
-</motion.div>
+          <motion.span
+            className="text-lg"
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
+          >
+            ↓
+          </motion.span>
+        </motion.div>
 
       </div>
     </section>

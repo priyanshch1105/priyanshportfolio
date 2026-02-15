@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 
 export function Experience() {
   const experiences = [
-    "Built cross-platform mobile applications using Flutter and React Native",
-    "Integrated REST APIs, Firebase Authentication, Firestore, and Cloud Functions",
-    "Converted Figma UI/UX designs into pixel-perfect mobile interfaces",
-    "Implemented clean architecture, reusable components, and state management",
-    "Optimized performance, animations, and responsiveness for Android & iOS",
+    "Developed AI-powered mobile apps using TensorFlow Lite and ML Kit for on-device inference",
+    "Designed and implemented complete UI/UX workflows from user research to high-fidelity prototypes",
+    "Built cross-platform applications using Flutter with BLoC/Provider state management",
+    "Integrated machine learning models for image recognition, NLP, and prediction features",
+    "Converted Figma designs into pixel-perfect Flutter UIs with custom animations",
+    "Implemented Firebase services, REST APIs, and real-time data synchronization",
+    "Optimized app performance, reduced load times, and enhanced user experience metrics",
   ];
 
   return (
@@ -54,15 +56,15 @@ export function Experience() {
               {/* Content */}
               <div className="flex-1">
                 <h3 className="text-2xl mb-1 bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
-                  Mobile App Developer
+                  AI/ML Engineer · UI/UX Designer · Flutter Developer
                 </h3>
 
                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                  Android · iOS · Flutter · React Native
+                  AI Integration · Mobile Development · Design Systems
                 </p>
 
                 <p className="text-indigo-600 dark:text-indigo-400 mb-6 text-sm">
-                  Freelance · Startup Projects · Personal Apps
+                  Freelance · Startup Projects · Personal Innovation
                 </p>
 
                 <ul className="space-y-4">

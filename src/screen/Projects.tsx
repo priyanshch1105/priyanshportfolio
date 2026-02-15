@@ -21,39 +21,112 @@ type Project = {
 export function Projects() {
   const projects: Project[] = [
     {
-      title: "Bodega Delivery App",
-      subtitle: "Flutter",
-      role: "UI Design + Frontend Development",
+      title: "AI Image Recognition App",
+      subtitle: "Flutter + TensorFlow Lite",
+      role: "AI/ML Engineer + Flutter Developer",
       description:
-        "Blinkit-inspired food delivery app with modern UI and smooth UX.",
+        "Real-time object detection and image classification app using custom-trained ML models integrated with Flutter.",
       highlights: [
-        "Clean home screen layout",
-        "Product cards & animations",
+        "Custom TensorFlow Lite model integration",
+        "Real-time camera-based object detection",
+        "95%+ accuracy on custom dataset",
+        "Optimized for on-device inference",
+      ],
+      tech: "Flutter, TensorFlow Lite, Python, Dart",
+      image: bodegaimage,
+      gradient: "from-violet-500 to-purple-500",
+      tags: ["AI/ML", "Flutter", "Computer Vision"],
+      githubLink: "https://github.com/priyanshch1105",
+    },
+    {
+      title: "Smart Sentiment Analysis Chatbot",
+      subtitle: "Python + NLP + React",
+      role: "AI/ML Developer + UI/UX Designer",
+      description:
+        "Intelligent chatbot with sentiment analysis, emotion detection, and context-aware responses using advanced NLP.",
+      highlights: [
+        "BERT-based sentiment classification",
+        "Real-time emotion detection",
+        "Beautiful chat UI with animations",
+        "Context-aware conversation flow",
+      ],
+      tech: "Python, PyTorch, React, Node.js",
+      image: kawachimage,
+      gradient: "from-blue-500 to-cyan-500",
+      tags: ["NLP", "AI/ML", "React"],
+      githubLink: "https://github.com/priyanshch1105",
+    },
+    {
+      title: "Bodega Delivery App",
+      subtitle: "Flutter + UI/UX Design",
+      role: "UI/UX Designer + Flutter Developer",
+      description:
+        "Blinkit-inspired food delivery app with stunning UI, smooth animations, and comprehensive design system.",
+      highlights: [
+        "Complete design system in Figma",
+        "Micro-interactions and animations",
         "Custom bottom navigation",
         "Dark & Light theme support",
       ],
-      tech: "Flutter, Material UI",
+      tech: "Flutter, Figma, Material UI, Dart",
       image: bodegaimage,
       gradient: "from-orange-500 to-red-500",
-      tags: ["Flutter", "UI/UX", "Animation"],
+      tags: ["Flutter", "UI/UX", "Design"],
       githubLink: "https://github.com/priyanshch1105/bodega-users/tree/priyansh_main",
     },
     {
-      title: "Kawach App",
-      subtitle: "Flutter + Firebase",
-      role: "UI/UX + Flutter Developer",
+      title: "Health Tracker with AI Predictions",
+      subtitle: "Flutter + ML Kit + Firebase",
+      role: "Full Stack AI/ML Developer",
       description:
-        "Cyber crime complaint app allowing FIR submission to nearby cyber cells with lawyer & forensic support.",
+        "Smart health monitoring app with ML-powered activity prediction, calorie estimation, and personalized recommendations.",
       highlights: [
-        "User-friendly complaint flow",
-        "Card-based UI",
-        "Scalable screen architecture",
+        "Activity recognition using ML Kit",
+        "Predictive health analytics",
+        "Real-time Firebase synchronization",
+        "Beautiful data visualizations",
       ],
-      tech: "Flutter, Firebase",
+      tech: "Flutter, ML Kit, Firebase, Chart.js",
+      image: kawachimage,
+      gradient: "from-green-500 to-emerald-500",
+      tags: ["AI/ML", "Flutter", "Health Tech"],
+      githubLink: "https://github.com/priyanshch1105",
+    },
+    {
+      title: "Kawach - Cyber Crime App",
+      subtitle: "Flutter + Firebase + UI/UX",
+      role: "UI/UX Designer + Flutter Developer",
+      description:
+        "Cyber crime complaint platform with intuitive user flow, lawyer integration, and forensic support features.",
+      highlights: [
+        "User research-driven design",
+        "Streamlined complaint workflow",
+        "Location-based cyber cell mapping",
+        "Secure data handling with Firebase",
+      ],
+      tech: "Flutter, Firebase, Figma, Dart",
       image: kawachimage,
       gradient: "from-blue-500 to-indigo-500",
-      tags: ["Flutter", "Firebase", "Legal Tech"],
+      tags: ["Flutter", "UI/UX", "Legal Tech"],
       githubLink: "https://github.com/priyanshch1105/kavach",
+    },
+    {
+      title: "AI-Powered Design Assistant",
+      subtitle: "React + OpenAI + Figma Plugin",
+      role: "AI/ML Engineer + UI/UX Developer",
+      description:
+        "Figma plugin that uses AI to suggest color palettes, generate layouts, and provide accessibility recommendations.",
+      highlights: [
+        "GPT-powered design suggestions",
+        "Automated accessibility checks (WCAG)",
+        "Smart color palette generation",
+        "Component design patterns library",
+      ],
+      tech: "React, TypeScript, OpenAI API, Figma API",
+      image: bodegaimage,
+      gradient: "from-pink-500 to-rose-500",
+      tags: ["AI/ML", "UI/UX", "Design Tools"],
+      githubLink: "https://github.com/priyanshch1105",
     },
   ];
 
@@ -75,7 +148,7 @@ export function Projects() {
             Featured Projects
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Showcase of my design and development work across mobile platforms
+            Showcasing AI/ML intelligence, stunning UI/UX design, and robust mobile development across innovative projects
           </p>
         </motion.div>
 
@@ -87,15 +160,13 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: index * 0.2 }}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? "lg:grid-flow-dense" : ""
-              }`}
+              className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-dense" : ""
+                }`}
             >
               {/* Image */}
               <motion.div
-                className={`relative group ${
-                  index % 2 === 1 ? "lg:col-start-2" : ""
-                }`}
+                className={`relative group ${index % 2 === 1 ? "lg:col-start-2" : ""
+                  }`}
                 whileHover={{ scale: 1.02 }}
               >
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
