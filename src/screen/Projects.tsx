@@ -20,41 +20,44 @@ type Project = {
 
 export function Projects() {
   const projects: Project[] = [
+    // ... projects data remains same ...
     {
-      title: "AI Image Recognition App",
-      subtitle: "Flutter + TensorFlow Lite",
-      role: "AI/ML Engineer + Flutter Developer",
+      title: "Agentic DevOps Automation",
+      subtitle: "Python , git , LLM",
+      role: "AI/ML Engineer",
       description:
-        "Real-time object detection and image classification app using custom-trained ML models integrated with Flutter.",
+        "An agentic, safe-by-default DevOps assistant that converts natural language into Terraform plans, runs them in a Docker sandbox, enforces OPA policies, audits AWS (read-only), estimates costs, and generates CI/CD pipelines — without ever applying infrastructure automatically.",
       highlights: [
-        "Custom TensorFlow Lite model integration",
-        "Real-time camera-based object detection",
-        "95%+ accuracy on custom dataset",
-        "Optimized for on-device inference",
+        "Converts natural language into Terraform plans",
+        "Runs them in a Docker sandbox",
+        "Enforces OPA policies",
+        "Audits AWS (read-only)",
+        "Estimates costs",
+        "Generates CI/CD pipelines",
       ],
-      tech: "Flutter, TensorFlow Lite, Python, Dart",
+      tech: "Python, git, LLM",
       image: bodegaimage,
       gradient: "from-violet-500 to-purple-500",
-      tags: ["AI/ML", "Flutter", "Computer Vision"],
-      githubLink: "https://github.com/priyanshch1105",
+      tags: ["AI/ML", "DevOps", "Computer Vision"],
+      githubLink: "https://github.com/priyanshch1105/agentic-devops-automation",
     },
     {
-      title: "Smart Sentiment Analysis Chatbot",
-      subtitle: "Python + NLP + React",
-      role: "AI/ML Developer + UI/UX Designer",
+      title: "Sense AI",
+      subtitle: "Python + ML + ReactNative",
+      role: "AI/ML Developer + Mobile Developer",
       description:
-        "Intelligent chatbot with sentiment analysis, emotion detection, and context-aware responses using advanced NLP.",
+        "SenseAI is a React Native (CLI) mobile application focused on therapy assistance, guided exercise sessions, and speech-based learning.",
       highlights: [
         "BERT-based sentiment classification",
         "Real-time emotion detection",
         "Beautiful chat UI with animations",
         "Context-aware conversation flow",
       ],
-      tech: "Python, PyTorch, React, Node.js",
+      tech: "Python, PyTorch, ReactNative, Node.js",
       image: kawachimage,
       gradient: "from-blue-500 to-cyan-500",
       tags: ["NLP", "AI/ML", "React"],
-      githubLink: "https://github.com/priyanshch1105",
+      githubLink: "https://github.com/priyanshch1105/senseAi",
     },
     {
       title: "Bodega Delivery App",
@@ -75,22 +78,22 @@ export function Projects() {
       githubLink: "https://github.com/priyanshch1105/bodega-users/tree/priyansh_main",
     },
     {
-      title: "Health Tracker with AI Predictions",
-      subtitle: "Flutter + ML Kit + Firebase",
+      title: "Maharishi Chat App",
+      subtitle: "ReactNative + Firebase + Websocket",
       role: "Full Stack AI/ML Developer",
       description:
-        "Smart health monitoring app with ML-powered activity prediction, calorie estimation, and personalized recommendations.",
+        "Maharishi Chat App is a React Native mobile application focused on chat in between Management and teachers of Maharishi University of Management.",
       highlights: [
         "Activity recognition using ML Kit",
         "Predictive health analytics",
         "Real-time Firebase synchronization",
         "Beautiful data visualizations",
       ],
-      tech: "Flutter, ML Kit, Firebase, Chart.js",
+      tech: "ReactNative, Firebase, Websocket, Node.js",
       image: kawachimage,
       gradient: "from-green-500 to-emerald-500",
-      tags: ["AI/ML", "Flutter", "Health Tech"],
-      githubLink: "https://github.com/priyanshch1105",
+      tags: ["ReactNative", "Chat App"],
+      githubLink: "https://github.com/priyanshch1105/maharishi-message-app",
     },
     {
       title: "Kawach - Cyber Crime App",
@@ -111,8 +114,8 @@ export function Projects() {
       githubLink: "https://github.com/priyanshch1105/kavach",
     },
     {
-      title: "AI-Powered Design Assistant",
-      subtitle: "React + OpenAI + Figma Plugin",
+      title: "AI-Powered Learning App",
+      subtitle: "Flutter + OpenAI + Figma Plugin",
       role: "AI/ML Engineer + UI/UX Developer",
       description:
         "Figma plugin that uses AI to suggest color palettes, generate layouts, and provide accessibility recommendations.",
@@ -122,18 +125,37 @@ export function Projects() {
         "Smart color palette generation",
         "Component design patterns library",
       ],
-      tech: "React, TypeScript, OpenAI API, Figma API",
+      tech: "Flutter, OpenAI API, Figma API",
       image: bodegaimage,
       gradient: "from-pink-500 to-rose-500",
-      tags: ["AI/ML", "UI/UX", "Design Tools"],
-      githubLink: "https://github.com/priyanshch1105",
+      tags: ["Flutter", "AI/ML", "Design Tools"],
+      githubLink: "https://github.com/priyanshch1105/AILearningTutor",
     },
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8 },
+    },
+  };
 
   return (
     <section
       id="projects"
-      className="py-24 px-6 bg-gradient-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900"
+      className="py-24 px-6 relative overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-gray-950 dark:to-gray-900"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -141,26 +163,37 @@ export function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.8 }}
+          className="text-center mb-24"
         >
-          <h2 className="mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="px-4 py-1.5 rounded-full text-sm font-medium bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 mb-6 inline-block border border-indigo-200 dark:border-indigo-800"
+          >
+            Portfolio
+          </motion.span>
+          <h2 className="mb-6 text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent">
             Featured Projects
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Showcasing AI/ML intelligence, stunning UI/UX design, and robust mobile development across innovative projects
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
+            Showcasing AI/ML intelligence, stunning UI/UX design, and robust mobile development across innovative projects.
           </p>
         </motion.div>
 
-        <div className="space-y-24">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="space-y-32"
+        >
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: index * 0.2 }}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:grid-flow-dense" : ""
+              variants={itemVariants}
+              className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? "lg:grid-flow-dense" : ""
                 }`}
             >
               {/* Image */}
@@ -168,23 +201,24 @@ export function Projects() {
                 className={`relative group ${index % 2 === 1 ? "lg:col-start-2" : ""
                   }`}
                 whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.4 }}
               >
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative aspect-[16/10] rounded-[2rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-30 transition-opacity`}
+                    className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-40 transition-opacity duration-500`}
                   />
 
-                  <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-2 z-10">
+                  <div className="absolute bottom-6 left-6 right-6 flex flex-wrap gap-2 z-10">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-xs bg-white/90 dark:bg-gray-900/90 rounded-full"
+                        className="px-4 py-1.5 text-xs font-bold bg-white/90 dark:bg-gray-900/90 rounded-full shadow-lg backdrop-blur-md"
                       >
                         {tag}
                       </span>
@@ -192,58 +226,55 @@ export function Projects() {
                   </div>
                 </div>
 
+                {/* Decorative background glow */}
                 <div
-                  className={`absolute -inset-4 bg-gradient-to-br ${project.gradient} opacity-20 blur-2xl -z-10`}
+                  className={`absolute -inset-8 bg-gradient-to-br ${project.gradient} opacity-10 blur-3xl -z-10 group-hover:opacity-20 transition-opacity duration-500`}
                 />
               </motion.div>
 
               {/* Content */}
-              <div>
-                <h3 className="text-3xl mb-1">{project.title}</h3>
-                <p className="text-sm text-gray-500 mb-4">
-                  {project.subtitle}
-                </p>
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-3xl md:text-4xl font-extrabold mb-2 text-gray-900 dark:text-white leading-tight">
+                    {project.title}
+                  </h3>
+                  <p className={`text-lg font-medium bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent`}>
+                    {project.subtitle}
+                  </p>
+                </div>
 
-                <p className="text-gray-700 dark:text-gray-300 mb-6">
+                <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
                   {project.description}
                 </p>
 
-                <ul className="space-y-2 mb-6">
+                <ul className="grid gap-3">
                   {project.highlights.map((h) => (
-                    <li key={h} className="flex gap-2">
-                      <span
-                        className={`mt-2 h-2 w-2 rounded-full bg-gradient-to-r ${project.gradient}`}
-                      />
-                      {h}
+                    <li key={h} className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
+                      <div className={`mt-1.5 h-2 w-2 rounded-full shrink-0 bg-gradient-to-r ${project.gradient} shadow-lg shadow-indigo-500/20`} />
+                      <span className="text-sm font-medium">{h}</span>
                     </li>
                   ))}
                 </ul>
 
-                <p className="text-sm mb-6">
-                  <span className="text-gray-500">Tech: </span>
-                  <span
-                    className={`bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent font-medium`}
-                  >
-                    {project.tech}
-                  </span>
-                </p>
-
-                <div className="flex gap-3">
+                <div className="pt-4 flex flex-wrap gap-4 items-center">
+                  <div className="px-4 py-2 bg-gray-100 dark:bg-gray-800 rounded-xl text-sm font-bold text-gray-600 dark:text-gray-400">
+                    Tech: <span className="text-gray-900 dark:text-white">{project.tech}</span>
+                  </div>
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Button variant="outline">
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
+                    <Button variant="outline" className="h-12 px-6 rounded-xl font-bold border-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
+                      <Github className="mr-2 h-5 w-5" />
+                      View Code
                     </Button>
                   </a>
                 </div>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

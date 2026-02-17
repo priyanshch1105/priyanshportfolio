@@ -4,7 +4,7 @@ import { Heart } from "lucide-react";
 import { Navbar } from "../screen/Navbar";
 import { Hero } from "../screen/Hero";
 import { About } from "../screen/About";
-import { Skills } from "../screen/Skills";
+import { Resume } from "../screen/Resume";
 import { Projects } from "../screen/Projects";
 import { DesignProcess } from "../screen/DesignProcess";
 import { Experience } from "../screen/Experience";
@@ -20,7 +20,7 @@ export default function Index() {
       <main className="overflow-x-hidden">
         <Hero />
         <About />
-        <Skills />
+        <Resume />
         <Projects />
         <DesignProcess />
         <Experience />

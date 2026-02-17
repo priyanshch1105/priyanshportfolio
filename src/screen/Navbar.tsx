@@ -4,6 +4,9 @@ import {
   X,
   Sun,
   Moon,
+  Mail,
+  Linkedin,
+  MessageCircle,
 } from "lucide-react";
 import { Button } from "../ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -14,6 +17,12 @@ export function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const [isDark, setIsDark] = useState(false);
 
+  const socialLinks = [
+    { icon: Mail, href: "mailto:priyanshch1105@gmail.com", label: "Email" },
+    { icon: Linkedin, href: "https://linkedin.com/in/priyansh-chaurasiya", label: "LinkedIn" },
+    { icon: MessageCircle, href: "https://wa.me/91XXXXXXXXXX", label: "WhatsApp" },
+  ];
+
   /* ------------------------------------------------------ */
   /* Scroll + Active Section                                */
   /* ------------------------------------------------------ */
@@ -23,7 +32,7 @@ export function Navbar() {
 
       const sections = [
         "about",
-        "skills",
+        "resume",
         "projects",
         "experience",
         "contact",
@@ -70,7 +79,7 @@ export function Navbar() {
 
   const navItems = [
     { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
+    { label: "Resume", href: "#resume" },
     { label: "Projects", href: "#projects" },
     { label: "Experience", href: "#experience" },
     { label: "Contact", href: "#contact" },
@@ -139,7 +148,24 @@ export function Navbar() {
           </div>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden md:flex items-center gap-4">
+            {/* Social Links */}
+            <div className="flex items-center gap-2 border-r border-border pr-4 mr-2">
+              {socialLinks.map((link) => (
+                <motion.a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="p-2 rounded-lg text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <link.icon className="h-5 w-5" />
+                </motion.a>
+              ))}
+            </div>
+
             {/* Theme Toggle */}
             <motion.button
               onClick={toggleTheme}
@@ -202,7 +228,7 @@ export function Navbar() {
                 </div>
 
                 {/* REST OF NAV ITEMS */}
-                {["skills", "projects", "experience", "contact"].map((section) => (
+                {["resume", "projects", "experience", "contact"].map((section) => (
                   <button
                     key={section}
                     onClick={() => scrollToSection(`#${section}`)}
@@ -213,6 +239,21 @@ export function Navbar() {
                     {section.charAt(0).toUpperCase() + section.slice(1)}
                   </button>
                 ))}
+
+                {/* MOBILE SOCIAL LINKS */}
+                <div className="flex items-center gap-4 px-4 py-3 border-t border-border mt-2">
+                  {socialLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-lg bg-muted text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <link.icon className="h-5 w-5" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </motion.div>
           )}
