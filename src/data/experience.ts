@@ -1,26 +1,37 @@
+export type ExperienceEntry = {
+  role: string
+  org: string
+  period: string
+  description: string
+  highlights: string[]
+}
+
 export const experience: ExperienceEntry[] = [
-  {
-    role: "Developer Intern",
-    org: "TechnoParticles",
-    period: "April 2026 — August 2026",
-    description:
-      "Worked on frontend development and cross-platform application development, translating product requirements and UI designs into functional user experiences.",
-    highlights: [
-      "Developed and integrated responsive UI components for web and mobile applications",
-      "Worked with React Native and Flutter for cross-platform application development",
-      "Collaborated on API integration, debugging, and performance improvements",
-    ],
-  },
   {
     role: "Frontend Developer Intern",
     org: "Bodega Delivery",
-    period: "July 2025 — November 2025",
+    period: "Jul 2025 — Nov 2025",
     description:
-      "Worked on frontend development for a delivery platform, focusing on responsive interfaces, reusable components, and smooth user experiences.",
+      "Worked on frontend development for a delivery platform, building responsive interfaces, integrating APIs, and improving the overall user experience.",
     highlights: [
-      "Built and maintained reusable frontend components",
-      "Integrated APIs and handled application data and UI states",
-      "Improved responsive layouts and overall frontend user experience",
+      "Developed responsive and user-friendly web interfaces using Flutter and Dart",
+      "Integrated REST APIs and implemented dynamic frontend workflows for delivery operations",
+      "Built reusable UI components and optimized interfaces for desktop and mobile devices",
+      "Collaborated with the development team to fix UI bugs, improve performance, and enhance user experience",
+    ],
+  },
+  {
+    role: "Software Developer Intern",
+    org: "TechnoParticles",
+    period: "Apr 2026 — Aug 2026",
+    description:
+      "Worked on web and mobile applications using modern frontend technologies, backend APIs, and database-driven systems.",
+    highlights: [
+      "Developed and maintained responsive web applications using PHP, TypeScript, Flutter, Next.js, and React Native",
+      "Implemented dynamic modules, forms, dashboards, and database-driven functionality",
+      "Improved website responsiveness, SEO, performance, and cross-browser compatibility",
+      "Integrated frontend interfaces with backend APIs and resolved production UI and functionality issues",
+      "Collaborated on multiple client-facing web products and contributed to feature development and maintenance",
     ],
   },
 ]
