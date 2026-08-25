@@ -1,3 +1,15 @@
+export type ProjectVisual =
+  | "neural"
+  | "radar"
+  | "shield"
+  | "graph"
+  | "pulse"
+  | "network"
+  | "orbit"
+  | "terminal"
+  | "layers"
+  | "grid"
+
 export type Project = {
   id: string
   number: string
@@ -10,10 +22,9 @@ export type Project = {
     href: string
   }
   accent: string
-  visual: "radar" | "shield" | "neural" | "graph" | "pulse"
+  visual: ProjectVisual
   year: string
 }
-
 export const projects: Project[] = [
   {
     id: "flowconnect",
