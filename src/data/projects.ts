@@ -1,3 +1,19 @@
+export type Project = {
+  id: string
+  number: string
+  title: string
+  category: string
+  description: string
+  stack: string[]
+  cta: {
+    label: string
+    href: string
+  }
+  accent: string
+  visual: "radar" | "shield" | "neural" | "graph" | "pulse"
+  year: string
+}
+
 export const projects: Project[] = [
   {
     id: "flowconnect",
