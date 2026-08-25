@@ -1,10 +1,16 @@
 export const site = {
   name: "PRIYANSH",
-  fullName: "Priyansh",
-  roles: ["Frontend Developer", "AI/ML Engineer", "Mobile App Developer"],
-  tagline: "I build digital products where engineering meets intelligent design.",
+  fullName: "Priyansh Chaurasiya",
+  roles: [
+    "Software Developer",
+    "Frontend Developer",
+    "Mobile App Developer",
+  ],
+  tagline:
+    "I build scalable web and mobile applications with clean interfaces and reliable backend systems.",
   email: "priyanshchourasiya000@gmail.com",
-  location: "India · Available Worldwide",
+  location: "Noida, India · Available Worldwide",
+
   socials: {
     github: {
       label: "GitHub",
@@ -13,15 +19,16 @@ export const site = {
     },
     linkedin: {
       label: "LinkedIn",
-      href: "https://www.linkedin.com/in/priyanshchaurasiya1105",
+      href: "https://www.linkedin.com/in/priyanshchaurasiya1105/",
       handle: "/in/priyanshchaurasiya1105",
     },
     instagram: {
       label: "Instagram",
-      href: "https://www.instagram.com/",
+      href: "https://www.instagram.com/jii_priyansh",
       handle: "@priyansh",
     },
   },
+
   nav: [
     { label: "WORK", href: "#work" },
     { label: "ABOUT", href: "#about" },
