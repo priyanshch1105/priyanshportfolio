@@ -1,33 +1,41 @@
 export type TechNode = {
   name: string
-  domain: "frontend" | "mobile" | "ai" | "backend" | "infra"
+  domain: "frontend" | "mobile" | "backend"
 }
 
 export const technologies: TechNode[] = [
+  // Frontend
   { name: "React", domain: "frontend" },
   { name: "Next.js", domain: "frontend" },
   { name: "TypeScript", domain: "frontend" },
+  { name: "JavaScript", domain: "frontend" },
+  { name: "HTML5", domain: "frontend" },
+  { name: "CSS3", domain: "frontend" },
+  { name: "Tailwind CSS", domain: "frontend" },
+  { name: "Three.js", domain: "frontend" },
+
+  // Mobile
   { name: "React Native", domain: "mobile" },
   { name: "Flutter", domain: "mobile" },
-  { name: "Python", domain: "ai" },
-  { name: "FastAPI", domain: "backend" },
+  { name: "Dart", domain: "mobile" },
+
+  // Backend
+  { name: "C#", domain: "backend" },
+  { name: ".NET", domain: "backend" },
+  { name: "ASP.NET Core", domain: "backend" },
+  { name: "Web API", domain: "backend" },
   { name: "Node.js", domain: "backend" },
-  { name: "Three.js", domain: "frontend" },
-  { name: "GSAP", domain: "frontend" },
-  { name: "LangChain", domain: "ai" },
-  { name: "LangGraph", domain: "ai" },
-  { name: "FAISS", domain: "ai" },
-  { name: "PostgreSQL", domain: "backend" },
-  { name: "Docker", domain: "infra" },
-  { name: "AWS", domain: "infra" },
+  { name: "Express.js", domain: "backend" },
+  { name: "PHP", domain: "backend" },
+  { name: "REST APIs", domain: "backend" },
+  { name: "MySQL", domain: "backend" },
+  { name: "MongoDB", domain: "backend" },
 ]
 
 export const domainColors: Record<TechNode["domain"], string> = {
   frontend: "#7b6bff",
   mobile: "#5fe8e0",
-  ai: "#ff7bd5",
   backend: "#4d7cff",
-  infra: "#a3e635",
 }
 
 export const expertise = [
@@ -36,9 +44,9 @@ export const expertise = [
   "TypeScript",
   "React Native",
   "Flutter",
-  "Python",
-  "FastAPI",
-  "AI / ML",
-  "Three.js",
-  "GSAP",
+  "C#",
+  ".NET",
+  "ASP.NET Core",
+  "Node.js",
+  "PHP",
 ]
