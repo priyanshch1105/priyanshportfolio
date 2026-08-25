@@ -25,6 +25,7 @@ export type Project = {
   visual: ProjectVisual
   year: string
 }
+
 export const projects: Project[] = [
   {
     id: "flowconnect",
@@ -42,6 +43,7 @@ export const projects: Project[] = [
     visual: "neural",
     year: "2026",
   },
+
   {
     id: "rakshak",
     number: "02",
@@ -65,6 +67,7 @@ export const projects: Project[] = [
     visual: "radar",
     year: "2025",
   },
+
   {
     id: "kawach",
     number: "03",
@@ -81,6 +84,7 @@ export const projects: Project[] = [
     visual: "shield",
     year: "2024",
   },
+
   {
     id: "maharishi-connect",
     number: "04",
@@ -94,9 +98,10 @@ export const projects: Project[] = [
       href: "https://github.com/priyanshch1105",
     },
     accent: "#4d7cff",
-    visual: "pulse",
+    visual: "network",
     year: "2025",
   },
+
   {
     id: "technomeet",
     number: "05",
@@ -110,9 +115,10 @@ export const projects: Project[] = [
       href: "https://github.com/priyanshch1105",
     },
     accent: "#4d7cff",
-    visual: "graph",
+    visual: "orbit",
     year: "2025",
   },
+
   {
     id: "startupinvo",
     number: "06",
@@ -126,9 +132,10 @@ export const projects: Project[] = [
       href: "https://github.com/priyanshch1105",
     },
     accent: "#a3e635",
-    visual: "radar",
+    visual: "graph",
     year: "2025",
   },
+
   {
     id: "apna-healthcare",
     number: "07",
@@ -145,6 +152,7 @@ export const projects: Project[] = [
     visual: "pulse",
     year: "2024",
   },
+
   {
     id: "rendvo",
     number: "08",
@@ -158,9 +166,10 @@ export const projects: Project[] = [
       href: "https://github.com/priyanshch1105",
     },
     accent: "#ff5f8f",
-    visual: "pulse",
+    visual: "radar",
     year: "2025",
   },
+
   {
     id: "petiole",
     number: "09",
@@ -174,9 +183,10 @@ export const projects: Project[] = [
       href: "https://github.com/priyanshch1105",
     },
     accent: "#ff9f43",
-    visual: "shield",
+    visual: "terminal",
     year: "2025",
   },
+
   {
     id: "lino-bud",
     number: "10",
@@ -190,7 +200,7 @@ export const projects: Project[] = [
       href: "https://github.com/priyanshch1105",
     },
     accent: "#4d7cff",
-    visual: "graph",
+    visual: "layers",
     year: "2025",
   },
 ]
