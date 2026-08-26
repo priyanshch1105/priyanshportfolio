@@ -1,0 +1,100 @@
+# Priyansh — Software Developer & Mobile App Developer
+
+> Official portfolio of Priyansh, a Software Developer and Mobile App Developer focused on building modern web applications, cross-platform mobile apps, APIs, and scalable digital products.
+
+## Identity
+
+Name: Priyansh
+
+Role: Software Developer & Mobile App Developer
+
+Website: https://priyanshportfolio-two.vercel.app
+
+Email: priyanshchourasiya000@gmail.com
+
+GitHub: https://github.com/priyanshch1105
+
+LinkedIn: https://www.linkedin.com/in/priyanshchaurasiya1105
+
+## Primary Skills
+
+- Software Development
+- Mobile App Development
+- Frontend Development
+- Web Application Development
+- API Integration
+- Application Architecture
+- Performance Optimization
+- Responsive UI/UX
+
+## Technologies
+
+- TypeScript
+- JavaScript
+- React
+- Next.js
+- React Native
+- Flutter
+- Node.js
+- REST APIs
+- Firebase
+- Firebase Authentication
+- Firebase Realtime Database
+- Firebase Cloud Messaging
+- Git
+- GitHub
+- Tailwind CSS
+- GSAP
+- Three.js
+
+## AI & Intelligent Applications
+
+Priyansh also works with AI-powered applications and intelligent software systems, including:
+
+- RAG applications
+- AI-powered tutoring systems
+- Document-based question answering
+- AI API integrations
+- Automation systems
+
+## Development Focus
+
+Priyansh builds:
+
+- Modern web applications
+- Cross-platform mobile applications
+- REST API integrations
+- Firebase-powered applications
+- Interactive frontend experiences
+- AI-powered applications
+- Scalable software products
+
+## Portfolio
+
+The portfolio contains selected projects demonstrating web development, mobile development, software engineering, AI integrations, interactive interfaces, and real-world application development.
+
+## Design & Engineering
+
+The portfolio is built using:
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Three.js
+- React Three Fiber
+- GSAP
+- Framer Motion
+- Lenis
+
+The website uses cinematic animations, WebGL visuals, smooth scrolling, responsive layouts, and accessibility-aware motion.
+
+## Contact
+
+For software development, mobile application development, frontend development, or collaboration inquiries:
+
+Email: priyanshchourasiya000@gmail.com
+
+GitHub: https://github.com/priyanshch1105
+
+LinkedIn: https://www.linkedin.com/in/priyanshchaurasiya1105

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next"
+import Script from "next/script"
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google"
 
 import { SmoothScroll } from "@/components/animations/SmoothScroll"
@@ -26,61 +27,100 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://priyansh.dev"),
+  metadataBase: new URL("https://priyanshportfolio-two.vercel.app"),
+
   title: {
-    default: "Priyansh — Frontend Developer, AI/ML Engineer & Mobile App Developer",
+    default: "Priyansh — Software Developer & Mobile App Developer",
     template: "%s — Priyansh",
   },
+  verification: {
+    google: "dV1vqtFd2138KhHO9pKwGkCuGQ1f6V2OJFupK2TnCkM"
+  },
+
   description:
-    "I build digital products where engineering meets intelligent design. Frontend Developer, AI/ML Engineer & Mobile App Developer crafting cinematic, high-performance web experiences.",
+    "Priyansh is a Software Developer and Mobile App Developer building modern web applications, cross-platform mobile apps, scalable APIs, and high-performance digital products.",
+
   keywords: [
     "Priyansh",
-    "Frontend Developer",
-    "AI/ML Engineer",
+    "Software Developer",
+    "Software Engineer",
     "Mobile App Developer",
+    "Frontend Developer",
+    "React Developer",
+    "Next.js Developer",
+    "React Native Developer",
+    "Flutter Developer",
+    "TypeScript Developer",
+    "JavaScript Developer",
+    "Node.js Developer",
+    "Firebase Developer",
+    "REST API Developer",
+    "Web Developer",
+    "Mobile Developer",
+    "AI Developer",
     "React",
     "Next.js",
-    "TypeScript",
     "React Native",
     "Flutter",
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "Firebase",
     "Three.js",
     "GSAP",
     "Portfolio",
   ],
-  authors: [{ name: "Priyansh" }],
+
+  authors: [
+    {
+      name: "Priyansh",
+    },
+  ],
+
   creator: "Priyansh",
+
   openGraph: {
     type: "website",
     url: "https://priyansh.dev",
-    siteName: "Priyansh",
-    title: "Priyansh — Frontend Developer, AI/ML Engineer & Mobile App Developer",
+    siteName: "Priyansh — Software & Mobile Developer",
+
+    title: "Priyansh — Software Developer & Mobile App Developer",
+
     description:
-      "I build digital products where engineering meets intelligent design.",
+      "Software Developer and Mobile App Developer building modern web applications, cross-platform mobile apps, APIs, and scalable digital products.",
+
     images: [
       {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Priyansh — Frontend Developer, AI/ML Engineer & Mobile App Developer",
+        alt: "Priyansh — Software Developer & Mobile App Developer",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Priyansh — Frontend Developer, AI/ML Engineer & Mobile App Developer",
+
+    title: "Priyansh — Software Developer & Mobile App Developer",
+
     description:
-      "I build digital products where engineering meets intelligent design.",
+      "Software Developer and Mobile App Developer building modern web and mobile applications.",
+
     images: ["/og-image.svg"],
   },
+
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
       "max-image-preview": "large",
     },
   },
+
   icons: {
     icon: "/favicon.svg",
   },
@@ -94,7 +134,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  const gaId = process.env.NEXT_PUBLIC_GA_ID
+
   return (
     <html
       lang="en"
@@ -102,6 +146,28 @@ export default function RootLayout({
     >
       <body className="bg-void font-sans text-fog antialiased">
         <SmoothScroll>{children}</SmoothScroll>
+
+        {gaId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                  window.dataLayer.push(arguments);
+                }
+
+                gtag('js', new Date());
+                gtag('config', '${gaId}');
+              `}
+            </Script>
+          </>
+        )}
       </body>
     </html>
   )

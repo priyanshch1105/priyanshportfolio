@@ -1,5 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#050506"/>
-  <path d="M14 18 L32 44 L50 18" fill="none" stroke="#7b6bff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="32" cy="32" r="4" fill="#5fe8e0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#080912"/>
+      <stop offset="100%" stop-color="#030408"/>
+    </linearGradient>
+    <linearGradient id="p" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="48%" stop-color="#b9c7ff"/>
+      <stop offset="100%" stop-color="#35d9ff"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00eaff"/>
+      <stop offset="52%" stop-color="#4d6bff"/>
+      <stop offset="100%" stop-color="#b33cff"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="92" fill="url(#bg)"/>
+
+  <rect x="8" y="8" width="496" height="496" rx="84"
+        fill="none" stroke="url(#neon)" stroke-width="4" opacity=".9"/>
+
+  <!-- P monogram -->
+  <path d="M174 116h142c57 0 92 31 92 79s-35 80-92 80h-72v121h-70V116zm70 57v45h65c18 0 29-8 29-23s-11-22-29-22h-65z"
+        fill="url(#p)"/>
+
+  <!-- orbital stroke -->
+  <path d="M88 345c47-85 137-139 239-139 53 0 94 14 108 37 17 29-15 65-69 90-70 33-170 48-246 35-39-7-55-21-50-39 3-10 10-20 18-31"
+        fill="none" stroke="url(#neon)" stroke-width="10" stroke-linecap="round"
+        filter="url(#glow)"/>
+
+  <!-- code symbol -->
+  <g fill="none" stroke="url(#neon)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M91 199l-28 24 28 24"/>
+    <path d="M124 187l-20 72"/>
+    <path d="M133 199l28 24-28 24"/>
+  </g>
+
+  <!-- mobile outline -->
+  <g fill="none" stroke="url(#neon)" stroke-width="8">
+    <rect x="356" y="292" width="68" height="126" rx="15"/>
+    <path d="M381 306h18" stroke-linecap="round"/>
+    <circle cx="390" cy="398" r="5" fill="url(#neon)" stroke="none"/>
+  </g>
 </svg>

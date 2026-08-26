@@ -11,10 +11,16 @@ import { useReducedMotion } from "@/hooks/useReducedMotion"
 import { site } from "@/data/site"
 import { isReducedMotion } from "@/utils/animations"
 
-const HeroScene = dynamic(() => import("@/components/three/HeroScene").then((m) => m.HeroScene), {
-  ssr: false,
-  loading: () => null,
-})
+const HeroScene = dynamic(
+  () =>
+    import("@/components/three/HeroScene").then(
+      (m) => m.HeroScene
+    ),
+  {
+    ssr: false,
+    loading: () => null,
+  }
+)
 
 const LETTERS = Array.from("PRIYANSH")
 
@@ -31,33 +37,62 @@ export function Hero({ ready }: { ready: boolean }) {
 
     const ctx = gsap.context(() => {
       if (isReducedMotion()) {
-        gsap.set(".hero-letter, .hero-fade, .hero-cta", { autoAlpha: 1, yPercent: 0, y: 0 })
+        gsap.set(
+          ".hero-letter, .hero-fade, .hero-cta",
+          {
+            autoAlpha: 1,
+            yPercent: 0,
+            y: 0,
+          }
+        )
         return
       }
 
-      const tl = gsap.timeline({ defaults: { ease: "power4.out" } })
+      const tl = gsap.timeline({
+        defaults: {
+          ease: "power4.out",
+        },
+      })
+
       tl.fromTo(
         ".hero-letter",
         { yPercent: 130 },
-        { yPercent: 0, duration: 1.3, stagger: 0.06 },
+        {
+          yPercent: 0,
+          duration: 1.3,
+          stagger: 0.06,
+        },
         0.15
       )
         .fromTo(
           ".hero-fade",
           { autoAlpha: 0, y: 28 },
-          { autoAlpha: 1, y: 0, duration: 1, stagger: 0.12 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 1,
+            stagger: 0.12,
+          },
           "-=0.85"
         )
         .fromTo(
           ".hero-cta",
           { autoAlpha: 0, y: 22 },
-          { autoAlpha: 1, y: 0, duration: 0.8, stagger: 0.12 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.12,
+          },
           "-=0.7"
         )
         .fromTo(
           ".hero-scroll-hint",
           { autoAlpha: 0 },
-          { autoAlpha: 1, duration: 0.8 },
+          {
+            autoAlpha: 1,
+            duration: 0.8,
+          },
           "-=0.4"
         )
     }, root)
@@ -91,11 +126,22 @@ export function Hero({ ready }: { ready: boolean }) {
       id="top"
       className="relative flex min-h-[100svh] flex-col overflow-hidden"
     >
-      <div className="absolute inset-0 z-0" aria-hidden="true">
+      <div
+        className="absolute inset-0 z-0"
+        aria-hidden="true"
+      >
         <HeroScene isMobile={isMobile} />
       </div>
-      <div className="absolute inset-0 z-0 vignette" aria-hidden="true" />
-      <div className="absolute inset-0 z-0 grid-bg opacity-40 [mask-image:radial-gradient(80%_60%_at_50%_40%,black,transparent)]" aria-hidden="true" />
+
+      <div
+        className="absolute inset-0 z-0 vignette"
+        aria-hidden="true"
+      />
+
+      <div
+        className="absolute inset-0 z-0 grid-bg opacity-40 [mask-image:radial-gradient(80%_60%_at_50%_40%,black,transparent)]"
+        aria-hidden="true"
+      />
 
       <div className="hero-content relative z-10 flex min-h-[100svh] flex-col">
         <div className="flex flex-1 flex-col items-center justify-center px-4 text-center">
@@ -104,17 +150,30 @@ export function Hero({ ready }: { ready: boolean }) {
             style={{ fontSize: "var(--text-hero)" }}
             aria-label="Priyansh"
           >
-            <span aria-hidden="true" className="inline-flex overflow-hidden pb-[0.08em]">
+            <span
+              aria-hidden="true"
+              className="inline-flex overflow-hidden pb-[0.08em]"
+            >
               {LETTERS.map((letter, i) => (
-                <span key={i} className="inline-block overflow-hidden">
-                  <span className="hero-letter inline-block will-change-transform">{letter}</span>
+                <span
+                  key={i}
+                  className="inline-block overflow-hidden"
+                >
+                  <span className="hero-letter inline-block will-change-transform">
+                    {letter}
+                  </span>
                 </span>
               ))}
             </span>
           </h1>
 
           <p className="hero-fade mt-6 max-w-md font-mono text-[11px] uppercase leading-relaxed tracking-[0.22em] text-mute md:mt-8 md:max-w-lg md:text-sm">
-            Frontend Developer · AI/ML Engineer · Mobile App Developer
+            Software Developer · Mobile App Developer
+          </p>
+
+          <p className="hero-fade mt-4 max-w-xl text-sm leading-relaxed text-dim md:text-base">
+            Building modern web applications, cross-platform mobile apps,
+            and reliable software experiences.
           </p>
         </div>
 
@@ -123,16 +182,24 @@ export function Hero({ ready }: { ready: boolean }) {
             <span className="mb-3 block font-mono text-[10px] uppercase tracking-[0.3em] text-dim">
               — Manifesto
             </span>
+
             <p className="font-display text-xl font-medium leading-snug text-fog md:text-2xl">
               {site.tagline}
             </p>
           </blockquote>
 
           <div className="hero-fade flex flex-wrap items-center gap-4 md:justify-end">
-            <MagneticCTA href="#work" variant="solid">
+            <MagneticCTA
+              href="#work"
+              variant="solid"
+            >
               Explore Work
             </MagneticCTA>
-            <MagneticCTA href="#contact" variant="outline">
+
+            <MagneticCTA
+              href="#contact"
+              variant="outline"
+            >
               Let&apos;s Connect
             </MagneticCTA>
           </div>
@@ -143,6 +210,7 @@ export function Hero({ ready }: { ready: boolean }) {
             <span className="font-mono text-[9px] uppercase tracking-[0.4em] text-dim">
               Scroll
             </span>
+
             <div className="relative h-12 w-px overflow-hidden bg-line">
               <span className="absolute inset-x-0 top-0 h-4 bg-fog motion-safe:animate-[scrolldot_1.6s_cubic-bezier(0.16,1,0.3,1)_infinite]" />
             </div>

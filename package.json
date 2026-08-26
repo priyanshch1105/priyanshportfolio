@@ -2,7 +2,7 @@
   "name": "priyansh-portfolio",
   "private": true,
   "version": "3.0.0",
-  "description": "Cinematic developer portfolio — Priyansh. Frontend Developer, AI/ML Engineer & Mobile App Developer.",
+  "description": "Cinematic developer portfolio — Priyansh. Software Developer & Mobile App Developer.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

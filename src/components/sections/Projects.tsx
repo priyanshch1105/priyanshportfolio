@@ -16,20 +16,20 @@ export function Projects() {
           <span className="h-px flex-1 bg-line" />
 
           <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-dim">
-            Work
+            Projects
           </span>
         </div>
 
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <EditorialTitle
-            text="SELECTED WORK, BUILT TO MOVE."
-            className="max-w-3xl text-[clamp(2.2rem,6.5vw,6.5rem)] text-fog"
+            text="SOFTWARE BUILT FOR REAL-WORLD PROBLEMS."
+            className="max-w-4xl text-[clamp(2.2rem,6.5vw,6.5rem)] text-fog"
           />
 
-          <p className="max-w-xs text-sm leading-relaxed text-dim">
-            Ten projects across web, mobile, backend, AI automation, and
-            real-world digital products — built with a focus on performance,
-            usability, and scalable engineering.
+          <p className="max-w-sm text-sm leading-relaxed text-dim">
+            A selection of web and mobile applications built with modern
+            technologies, clean architecture, and a focus on performance,
+            scalability, and user experience.
           </p>
         </div>
       </div>

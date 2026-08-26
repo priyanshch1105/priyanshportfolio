@@ -18,45 +18,73 @@ export function About() {
 
     const ctx = gsap.context(() => {
       if (isReducedMotion()) {
-        gsap.set(".about-fade", { autoAlpha: 1, y: 0 })
+        gsap.set([".about-fade", ".about-tag"], {
+          autoAlpha: 1,
+          y: 0,
+        })
         return
       }
-      fadeUp(".about-fade", { trigger: rootRef.current, stagger: 0.12 })
-      fadeUp(".about-tag", { trigger: rootRef.current, stagger: 0.05 })
+
+      fadeUp(".about-fade", {
+        trigger: rootRef.current,
+        stagger: 0.12,
+      })
+
+      fadeUp(".about-tag", {
+        trigger: rootRef.current,
+        stagger: 0.05,
+      })
     }, rootRef)
 
     return () => ctx.revert()
   }, [reduced])
 
   return (
-    <section ref={rootRef} id="about" className="relative overflow-hidden py-28 md:py-44">
-      <div className="absolute inset-0 grid-bg opacity-30 [mask-image:radial-gradient(70%_60%_at_20%_30%,black,transparent)]" aria-hidden="true" />
+    <section
+      ref={rootRef}
+      id="about"
+      className="relative overflow-hidden py-28 md:py-44"
+    >
+      <div
+        className="absolute inset-0 grid-bg opacity-30 [mask-image:radial-gradient(70%_60%_at_20%_30%,black,transparent)]"
+        aria-hidden="true"
+      />
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 md:px-10">
         <div className="about-fade mb-10 flex items-center gap-4 md:mb-16">
-          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">01</span>
+          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-accent">
+            01
+          </span>
+
           <span className="h-px flex-1 bg-line" />
-          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-dim">About</span>
+
+          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-dim">
+            About
+          </span>
         </div>
 
         <EditorialTitle
-          text="ENGINEERING DIGITAL EXPERIENCES."
+          text="BUILDING SOFTWARE THAT WORKS EVERYWHERE."
           className="text-[clamp(2.4rem,7.5vw,7.5rem)] text-fog"
-          accentWords={[0]}
+          accentWords={[1]}
         />
 
         <div className="mt-14 grid gap-12 md:mt-24 md:grid-cols-12">
           <div className="md:col-span-7">
             <p className="about-fade max-w-2xl font-display text-xl leading-relaxed text-mute md:text-2xl">
-              I&apos;m <span className="text-fog">Priyansh</span> — a builder at the intersection of
-              product, intelligence and motion. I ship interfaces that feel alive, AI systems that
-              reason, and mobile apps that run anywhere.
+              I&apos;m <span className="text-fog">Priyansh</span> — a Software
+              Developer focused on building reliable web and mobile
+              applications. I enjoy turning ideas into clean, scalable
+              products with thoughtful user experiences.
             </p>
+
             <p className="about-fade mt-6 max-w-2xl text-base leading-relaxed text-dim md:text-lg">
-              From agentic DevOps pipelines governed by policy engines to RAG tutoring systems that
-              read source documents — every system I build obsesses over the same thing:{" "}
-              <span className="text-fog">craft that performs</span>. Cinematic frontends, intelligent
-              backends, and the small details in between.
+              My work spans <span className="text-fog">React, React Native,
+              Flutter, Node.js and APIs</span>, with a strong focus on
+              application architecture, performance and maintainable code.
+              From responsive interfaces to production-ready mobile apps, I
+              care about building software that is fast, practical and easy to
+              evolve.
             </p>
           </div>
 
@@ -64,6 +92,7 @@ export function About() {
             <p className="about-fade mb-5 font-mono text-[11px] uppercase tracking-[0.3em] text-dim">
               Core expertise
             </p>
+
             <div className="flex flex-wrap gap-2.5">
               {expertise.map((skill) => (
                 <span
@@ -75,9 +104,11 @@ export function About() {
                 </span>
               ))}
             </div>
+
             <div className="about-fade mt-10 border-l-2 border-accent/60 pl-5">
               <p className="font-display text-lg italic leading-relaxed text-mute">
-                “Design is intelligence made visible — I just add motion and meaning.”
+                “Good software is simple to use, reliable to run, and built to
+                grow.”
               </p>
             </div>
           </div>
