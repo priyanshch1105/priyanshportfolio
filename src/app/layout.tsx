@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   ),
 
   title: {
-    default: "Priyansh — Software Developer & Mobile App Developer",
-    template: "%s — Priyansh",
+    default: "Priyansh Chaurasiya — Software Developer & Mobile App Developer",
+    template: "%s — Priyansh Chaurasiya",
   },
 
   verification: {
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Priyansh is a Software Developer and Mobile App Developer building modern web applications, cross-platform mobile apps, scalable APIs, and high-performance digital products.",
+    "Priyansh Chaurasiya is a Software Developer and Mobile App Developer building modern web applications, cross-platform mobile apps, scalable APIs, and high-performance digital products.",
 
   keywords: [
-    "Priyansh",
+    "Priyansh Chaurasiya",
     "Software Developer",
     "Software Engineer",
     "Mobile App Developer",
@@ -74,14 +74,14 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
 
-  authors: [{ name: "Priyansh" }],
-  creator: "Priyansh",
+  authors: [{ name: "Priyansh Chaurasiya" }],
+  creator: "Priyansh Chaurasiya",
 
   openGraph: {
     type: "website",
     url: "https://priyanshportfolio-two.vercel.app",
-    siteName: "Priyansh — Software & Mobile Developer",
-    title: "Priyansh — Software Developer & Mobile App Developer",
+    siteName: "Priyansh Chaurasiya — Software & Mobile Developer",
+    title: "Priyansh Chaurasiya — Software Developer & Mobile App Developer",
     description:
       "Software Developer and Mobile App Developer building modern web applications, cross-platform mobile apps, APIs, and scalable digital products.",
     images: [
@@ -89,14 +89,14 @@ export const metadata: Metadata = {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "Priyansh — Software Developer & Mobile App Developer",
+        alt: "Priyansh Chaurasiya — Software Developer & Mobile App Developer",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Priyansh — Software Developer & Mobile App Developer",
+    title: "Priyansh Chaurasiya — Software Developer & Mobile App Developer",
     description:
       "Software Developer and Mobile App Developer building modern web and mobile applications.",
     images: ["/og-image.svg"],
@@ -143,14 +143,14 @@ export default function RootLayout({
     __html: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Person",
-      name: "Priyansh",
+      name: "Priyansh Chaurasiya",
       url: "https://priyanshportfolio-two.vercel.app",
       jobTitle: "Software Developer & Mobile App Developer",
       description:
         "Software Developer and Mobile App Developer building modern web applications, cross-platform mobile apps, APIs, and scalable digital products.",
       image:
         "https://priyanshportfolio-two.vercel.app/og-image.svg",
-      sameAs: [
+      sameAs: [ 
         "https://github.com/priyanshch1105",
         "https://www.linkedin.com/in/priyanshchaurasiya1105",
       ],

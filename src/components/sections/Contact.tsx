@@ -227,7 +227,7 @@ export function Contact() {
           </span>
 
           <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-dim">
-            Designed & built by Priyansh © 2026
+            Priyansh Chaurasiya © 2026
           </span>
         </div>
       </div>

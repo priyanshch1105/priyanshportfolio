@@ -148,7 +148,7 @@ export function Hero({ ready }: { ready: boolean }) {
           <h1
             className="font-display font-semibold leading-[0.9] tracking-tight text-fog"
             style={{ fontSize: "var(--text-hero)" }}
-            aria-label="Priyansh"
+            aria-label="Priyansh Chaurasiya"
           >
             <span
               aria-hidden="true"

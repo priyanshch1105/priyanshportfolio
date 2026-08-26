@@ -1,10 +1,10 @@
-# Priyansh — Software Developer & Mobile App Developer
+# Priyansh Chaurasiya— Software Developer & Mobile App Developer
 
-> Official portfolio of Priyansh, a Software Developer and Mobile App Developer focused on building modern web applications, cross-platform mobile apps, APIs, and scalable digital products.
+> Official portfolio of Priyansh Chaurasiya, a Software Developer and Mobile App Developer focused on building modern web applications, cross-platform mobile apps, APIs, and scalable digital products.
 
 ## Identity
 
-Name: Priyansh
+Name: Priyansh Chaurasiya
 
 Role: Software Developer & Mobile App Developer
 
@@ -49,7 +49,7 @@ LinkedIn: https://www.linkedin.com/in/priyanshchaurasiya1105
 
 ## AI & Intelligent Applications
 
-Priyansh also works with AI-powered applications and intelligent software systems, including:
+Priyansh Chaurasiya also works with AI-powered applications and intelligent software systems, including:
 
 - RAG applications
 - AI-powered tutoring systems
@@ -59,7 +59,7 @@ Priyansh also works with AI-powered applications and intelligent software system
 
 ## Development Focus
 
-Priyansh builds:
+Priyansh Chaurasiya builds:
 
 - Modern web applications
 - Cross-platform mobile applications
