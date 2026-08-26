@@ -136,6 +136,43 @@ export default function RootLayout({
       <body className="bg-void font-sans text-fog antialiased">
         <SmoothScroll>{children}</SmoothScroll>
 
+<Script
+  id="person-schema"
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Priyansh",
+      url: "https://priyanshportfolio-two.vercel.app",
+      jobTitle: "Software Developer & Mobile App Developer",
+      description:
+        "Software Developer and Mobile App Developer building modern web applications, cross-platform mobile apps, APIs, and scalable digital products.",
+      image:
+        "https://priyanshportfolio-two.vercel.app/og-image.svg",
+      sameAs: [
+        "https://github.com/priyanshch1105",
+        "https://www.linkedin.com/in/priyanshchaurasiya1105",
+      ],
+      knowsAbout: [
+        "Software Development",
+        "Mobile App Development",
+        "Web Development",
+        "React",
+        "Next.js",
+        "React Native",
+        "Flutter",
+        "TypeScript",
+        "JavaScript",
+        "Node.js",
+        "Firebase",
+        "REST APIs",
+        "AI Development",
+      ],
+    }),
+  }}
+/>
+
         {/* Google Analytics */}
         <Script
           async
