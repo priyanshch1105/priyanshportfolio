@@ -27,14 +27,17 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://priyanshportfolio-two.vercel.app"),
+  metadataBase: new URL(
+    "https://priyanshportfolio-two.vercel.app"
+  ),
 
   title: {
     default: "Priyansh — Software Developer & Mobile App Developer",
     template: "%s — Priyansh",
   },
+
   verification: {
-    google: "dV1vqtFd2138KhHO9pKwGkCuGQ1f6V2OJFupK2TnCkM"
+    google: "dV1vqtFd2138KhHO9pKwGkCuGQ1f6V2OJFupK2TnCkM",
   },
 
   description:
@@ -71,24 +74,16 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
 
-  authors: [
-    {
-      name: "Priyansh",
-    },
-  ],
-
+  authors: [{ name: "Priyansh" }],
   creator: "Priyansh",
 
   openGraph: {
     type: "website",
     url: "https://priyanshportfolio-two.vercel.app",
     siteName: "Priyansh — Software & Mobile Developer",
-
     title: "Priyansh — Software Developer & Mobile App Developer",
-
     description:
       "Software Developer and Mobile App Developer building modern web applications, cross-platform mobile apps, APIs, and scalable digital products.",
-
     images: [
       {
         url: "/og-image.svg",
@@ -101,19 +96,15 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-
     title: "Priyansh — Software Developer & Mobile App Developer",
-
     description:
       "Software Developer and Mobile App Developer building modern web and mobile applications.",
-
     images: ["/og-image.svg"],
   },
 
   robots: {
     index: true,
     follow: true,
-
     googleBot: {
       index: true,
       follow: true,
@@ -137,8 +128,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID
-
   return (
     <html
       lang="en"
@@ -147,27 +136,26 @@ export default function RootLayout({
       <body className="bg-void font-sans text-fog antialiased">
         <SmoothScroll>{children}</SmoothScroll>
 
-        {gaId && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="afterInteractive"
-            />
+        {/* Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-S9RS27GKSL"
+          strategy="afterInteractive"
+        />
 
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
 
-                function gtag() {
-                  window.dataLayer.push(arguments);
-                }
+            function gtag() {
+              dataLayer.push(arguments);
+            }
 
-                gtag('js', new Date());
-                gtag('config', '${gaId}');
-              `}
-            </Script>
-          </>
-        )}
+            gtag('js', new Date());
+
+            gtag('config', 'G-S9RS27GKSL');
+          `}
+        </Script>
       </body>
     </html>
   )
