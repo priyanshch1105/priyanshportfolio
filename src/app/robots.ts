@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://priyansh.dev/sitemap.xml",
+    sitemap: "https://priyanshportfolio-two.vercel.app/sitemap.xml",
   }
 }
