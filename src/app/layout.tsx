@@ -74,6 +74,7 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
 
+  
   authors: [{ name: "Priyansh Chaurasiya" }],
   creator: "Priyansh Chaurasiya",
 
@@ -110,6 +111,9 @@ export const metadata: Metadata = {
       follow: true,
       "max-image-preview": "large",
     },
+  },
+  alternates: {
+    canonical: "/",
   },
 
   icons: {
