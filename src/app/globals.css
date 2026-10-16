@@ -29,6 +29,7 @@
 }
 
 * {
+  box-sizing: border-box;
   border-color: var(--color-line);
 }
 
@@ -56,7 +57,28 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+/* Keep long project names, emails, and code inside their content columns. */
+p,
+h1,
+h2,
+h3,
+a,
+li {
+  overflow-wrap: anywhere;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
 }
 
 @media (pointer: fine) {
@@ -229,5 +251,18 @@ body {
 
   * {
     scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 639px) {
+  .grid-bg {
+    background-size: 52px 52px;
+  }
+
+  .hero-scroll-hint {
+    display: none;
   }
 }

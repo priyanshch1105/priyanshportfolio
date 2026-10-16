@@ -90,7 +90,12 @@ export function CodingSection() {
             <span className="font-mono text-[10px] text-dim">TS</span>
           </div>
           <div className="relative px-5 py-6 md:px-8 md:py-8">
-            <div className="overflow-hidden font-mono text-[13px] leading-[1.9] text-fog/90 md:text-[15px]" aria-label="Developer profile as code">
+            <div
+              className="max-w-full overflow-x-auto font-mono text-[13px] leading-[1.9] text-fog/90 md:text-[15px]"
+              role="region"
+              aria-label="Developer profile code; scroll horizontally to read long lines"
+              tabIndex={0}
+            >
               <span ref={codeRef} style={{ whiteSpace: "pre" }} />
               <span className="code-caret" aria-hidden="true" />
             </div>

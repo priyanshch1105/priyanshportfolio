@@ -104,7 +104,7 @@ function CenterKnot() {
   )
 }
 
-function Rig() {
+function Rig({ children }: { children: React.ReactNode }) {
   const groupRef = useRef<THREE.Group>(null)
 
   useFrame((state) => {
@@ -121,7 +121,7 @@ function Rig() {
     )
   })
 
-  return <group ref={groupRef} />
+  return <group ref={groupRef}>{children}</group>
 }
 
 export function ContactScene({ isMobile }: { isMobile: boolean }) {
@@ -131,9 +131,10 @@ export function ContactScene({ isMobile }: { isMobile: boolean }) {
       camera={{ position: [0, 0, 6.5], fov: 45 }}
       gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
     >
-      <Rig />
-      <ContactField count={isMobile ? 350 : 1000} />
-      <CenterKnot />
+      <Rig>
+        <ContactField count={isMobile ? 180 : 700} />
+        <CenterKnot />
+      </Rig>
       <pointLight position={[4, 2, 5]} intensity={60} color="#7b6bff" />
     </Canvas>
   )

@@ -40,13 +40,18 @@ export function HorizontalGallery() {
           <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-dim">Gallery</span>
         </div>
 
-        <EditorialTitle
-          text="THE FULL ARCHIVE."
-          className="max-w-3xl text-[clamp(2.2rem,6.5vw,6.5rem)] text-fog"
-        />
-        <p className="mt-6 max-w-sm text-sm leading-relaxed text-dim">
-          Keep scrolling — vertical motion drives a horizontal journey through every project.
-        </p>
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <EditorialTitle
+            text="SOFTWARE BUILT FOR REAL-WORLD PROBLEMS."
+            className="max-w-4xl text-[clamp(2.2rem,6.5vw,6.5rem)] text-fog"
+          />
+
+          <p className="max-w-sm text-sm leading-relaxed text-dim">
+            A selection of web and mobile applications built with modern
+            technologies, clean architecture, and a focus on performance,
+            scalability, and user experience.
+          </p>
+        </div>
       </div>
 
       <div
